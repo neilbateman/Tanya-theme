@@ -1,0 +1,32 @@
+<div class="blog-social clearfix">
+	<div class="social-wrap">
+		{% if settings.blog_page_socialsharing_title == blank %}
+			<div class="social-heading">
+				{{ settings.blog_page_socialsharing_title }}
+			</div>
+		{% endif %}
+		{% if settings.blog_page_socialsharing_code == blank %}
+			<!-- Twitter Button -->
+			<div class="itemTwitterButton">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" >Twitter</a>
+				<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+			</div>
+			<!-- Facebook Button -->
+			<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=58&layout=box_count&action=like&show_faces=false&share=false&height=65&appId" width="58" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+		 	<!-- Google +1 Button -->
+			<div class="itemGooglePlusOneButton">
+				<g:plusone annotation="inline" width="120"></g:plusone>
+				<script type="text/javascript">
+				  	(function() {
+				  		window.___gcfg = { lang: 'en' }; // Define button default language here
+				    	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    		po.src = 'https://apis.google.com/js/plusone.js';
+				    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  	})();
+				</script>
+			</div>
+      	{% else %}
+      		{{ settings.blog_page_socialsharing_code }}
+		{% endif %}
+	</div>	
+</div>

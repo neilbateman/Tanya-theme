@@ -1,0 +1,11 @@
+<div class="pull-left infotopbar hidden-sp hidden-xs ApRawHtml block">
+  <div class="contactnav">
+    {% if settings.text_welcome != blank %}
+    <span>{{ settings.text_welcome }}</span>
+    {% endif %}
+    {% if settings.email_topbar != blank %}
+    <a href="mailto:{{settings.email_topbar}}">
+      <i class="fa fa-envelope"></i>{{ settings.email_topbar }}</a>
+    {% endif %}
+  </div>
+</div>
